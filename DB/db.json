@@ -1,0 +1,54 @@
+{
+  "Departamentos": [
+    {
+      "id": 1,
+      "nomDepartamento": "Santander"
+    },
+    {
+      "id": 2,
+      "nomDepartamento": "Cundinamarca"
+    }
+  ],
+  "Ciudades": [
+    {
+      "id": 1,
+      "nomCiudad": "Bucaramanga",
+      "departamentoId": 1,
+      "imagen": "https://www.google.com/url?sa=i&url=http%3A%2F%2Fsantandercompetitivo.org%2Fnoticias-y-novedades%2Fnoticias-institucionales%2Fbucaramanga-y-su-area-metropolitana-am-continua-entre-las-cinco-ciudades-mas-competitivas-del-pais-%2F&psig=AOvVaw1AtXDvILvctks5wVxKzm87&ust=1689713066490000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCIC2lOvNloADFQAAAAAdAAAAABAD",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 72
+      }
+    },
+    {
+      "id": 2,
+      "nomCiudad": "Barrancabermeja",
+      "departamentoId": 1,
+      "imagen": "https://www.terminaldetransporte.gov.co/wp-content/uploads/2022/06/barrancabermeja_nota.jpg",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 72
+      }
+    },
+    {
+      "nomCiudad": "Cajicá",
+      "departamentoId": 2,
+      "imagen": "https://www.diccionariodecolombia.expert/wp-content/uploads/2020/04/cajicaf.png",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 7
+      },
+      "id": 4
+    },
+    {
+      "nomCiudad": "Chia",
+      "departamentoId": 2,
+      "imagen": "https://images.ctfassets.net/cfexf643femz/567miuzsqyaWhH3Qo0FvQ7/03ff737f892d747747cc3ee5ba947e3b/shutterstock_1976259971__1___1_.jpg?w=1136&fm=webp&q=60",
+      "coordenadas": {
+        "lat": 34,
+        "lon": 55
+      },
+      "id": 5
+    }
+  ]
+}

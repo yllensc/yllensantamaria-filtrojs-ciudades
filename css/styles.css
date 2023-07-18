@@ -1,0 +1,91 @@
+body{
+    background-image: url('/img/backg.png');
+    background-attachment: fixed;
+    background-position:center;
+}
+
+#navOptions{
+    height: 100px;
+    background-color: rgba(129, 168, 240, 0.904);
+    box-shadow: 0px 0px 10px rgb(40, 40, 43);
+}
+.nav-link{
+    margin-right: 10px;
+    background-color: rgb(86, 86, 185);
+    border-radius: 10px;
+    border: none;
+    color: #000;
+}
+
+.container-dptos{
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+    display: none;
+}
+.table{
+    box-shadow: 0px 0px 15px #363535;
+    text-align: center;
+}
+
+.img-dpto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.iconCity{
+    color: green;
+}
+
+.img-detail{
+    width: 200px;
+    height: 200px;
+}
+.delButtonDpto, .editButtonDpto, .viewButton, .editBtnCities, .delBtnCities, .weatherBtnCities{
+    border: none;
+    background-color: transparent;
+}
+.fa-trash-can{
+    color: red
+}
+.fa-pen{
+    color: purple
+}
+.fa-circle-info{
+    color: rgb(0, 132, 255)
+}
+
+.fa-cloud-moon{
+    color:darkorange
+}
+
+.weather-box{
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+    z-index: 10;
+    text-align: center;
+    display: none;
+}
+
+.container-cities-route{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.labelDetail{
+    font-weight: 600;
+}
+
+.modal-header{
+    background-color: rgb(33, 128, 134);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active{
+    background-color: rgb(73, 27, 104) !important;
+    border: none;
+}
+
+

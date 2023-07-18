@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestor de ciudades</title>
+    <!--estilos-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>rutasApi</title>
+</head>
+
+<body>
+    <!--nav menu principal-->
+    <nav class="navbar navbar-expand-lg navbar-light " id="navOptions">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><h1>Gestor de ciudades</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="nav-link" id="createDpto">Crear departamento</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="viewDptos">Ver departamentos</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="btnChangeTem">Cambiar tema</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--departamentos tabla-->
+    <div class="container-dptos">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Ciudades</th>
+                    <th scope="col">Detalles</th>
+                    <th scope="col">Editar departamento</th>
+                    <th scope="col">Eliminar departamento</th>
+                </tr>
+            </thead>
+            <tbody class="body-tableDptos">
+            </tbody>
+        </table>
+    </div>
+
+    <!--modal para crear dpto-->
+    <div class="modal" tabindex="-1" id="modalDpto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar departamento</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="form__addDpto" action="" method="post">
+                        <div id="registroForm">
+                            <div class="mb-3">
+                                <label for="nameInputDpto" class="form-label">Nombre</label>
+                                <input type="text" id="nameInputDpto" class="form-control" placeholder="Título"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="bSaveDpto">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal de ciudades-->
+    <div class="modal" tabindex="-1" id="modalCity">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ciudades</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="form__addCity" action="" method="post">
+                        <h6>Agregar</h6>
+                        <div id="registroForm">
+                            <div class="mb-3">
+                                <label for="nameInput" class="form-label">Nombre</label>
+                                <input type="text" id="nameInput" class="form-control" placeholder="Título" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageInput" class="form-label">Imagen</label>
+                                <input type="url" id="imageInput" class="form-control"
+                                    placeholder="imagen de la ciudad">
+                            </div>
+                            <div class="mb-3">
+                                <label for="latitudInput" class="form-label">Latitud</label>
+                                <input type="number" id="latitudInput" class="form-control" placeholder="latitud">
+                            </div>
+                            <div class="mb-3">
+                                <label for="longitudInput" class="form-label">Longitud</label>
+                                <input type="number" id="longitudInput" class="form-control" placeholder="longitud">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="bSaveCity">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal de ciudades editar-->
+    <div class="modal" tabindex="-1" id="modalCityEdit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ciudades</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="form__editCity" action="" method="post">
+                        <h6>Agregar</h6>
+                        <div id="registroForm">
+                            <div class="mb-3">
+                                <label for="nameInputEdit" class="form-label">Nombre</label>
+                                <input type="text" id="nameInputEdit" class="form-control" placeholder="Título"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageInputEdit" class="form-label">Imagen</label>
+                                <input type="url" id="imageInputEdit" class="form-control"
+                                    placeholder="imagen de la ciudad">
+                            </div>
+                            <div class="mb-3">
+                                <label for="latitudInputEdit" class="form-label">Latitud</label>
+                                <input type="number" id="latitudInputEdit" class="form-control" placeholder="latitud">
+                            </div>
+                            <div class="mb-3">
+                                <label for="longitudInputEdit" class="form-label">Longitud</label>
+                                <input type="number" id="longitudInputEdit" class="form-control" placeholder="longitud">
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary" id="bSaveEdit">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Div Clima-->
+    <div class="weather-box">
+        <h3 class="cityName"></h3>
+        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" srcset="">
+        <p class="temperature"> <span>°C</span></p>
+        <p class="description"></p>
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal de detalles-->
+    <div class="modal" tabindex="-1" id="modalDptoDetails">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalles</h5>
+                </div>
+                <div class="modal-body" id="bodyDetails">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--scripts-->
+    <script type="module" src="js/app.js"></script>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
