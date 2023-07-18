@@ -16,7 +16,7 @@ export async function getDptos() {
 //ciudades
 export async function getCities() {
   try {
-    debugger;
+     
     let response = await (await fetch(`${URL}/Ciudades`)).json();
     console.log(response);
     return response;
@@ -27,7 +27,7 @@ export async function getCities() {
 
 //Metodo POST
 export async function postData(formData, nameJson) {
-  debugger;
+   
   let config = {
     method: "POST",
     headers: headers,
@@ -60,7 +60,7 @@ export async function deleteData(dataId, nameJson) {
 
 //Metodo Patch
 export async function patchData(dataEdit, id, nameJson) {
-  debugger;
+   
   let config = {
     method: "PUT",
     headers: headers,

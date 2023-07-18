@@ -63,7 +63,7 @@ export function showDptos(dptos) {
 
       formAddCity.addEventListener("submit", function (e) {
         e.preventDefault();
-        debugger;
+         
         const data = {
           nomCiudad: nameInput.value,
           departamentoId: parseInt(dptoId),
@@ -117,7 +117,7 @@ export function showDptos(dptos) {
   const delRouteBtns = document.querySelectorAll(".delButtonDpto");
   delRouteBtns.forEach((delBtn) => {
     delBtn.addEventListener("click", function () {
-      debugger;
+       
       const dptoId = this.getAttribute("data-id-del");
       deleteData(dptoId, "Departamentos");
     });
@@ -125,14 +125,14 @@ export function showDptos(dptos) {
 }
 //Modal de el detalle de las ciudades
 export async function showCities(dptoId) {
-  debugger;
+   
   const dataCities = await getCities();
-  debugger;
+   
   if (dataCities.length > 0) {
     let html = "";
     dataCities.forEach((city) => {
       if (city.departamentoId == dptoId) {
-        debugger;
+         
         html += `
           <div class="container-cities-route">
             <div class="cityInfo">
@@ -168,7 +168,7 @@ export async function showCities(dptoId) {
   const editBtnCities = document.querySelectorAll(".editBtnCities");
   editBtnCities.forEach((editBtn) => {
     editBtn.addEventListener("click", function () {
-      debugger;
+       
       const container = this.parentNode.parentNode;
       const nameCity = container.querySelector(".cityInfo p.nom").innerHTML;
       const image = container
@@ -195,10 +195,10 @@ export async function showCities(dptoId) {
 
       const editId = editBtn.getAttribute("data-edit"); // Almacenar el valor de data-edit en una variable, para el patch
       const editDptoId = editBtn.getAttribute("data-dptoId");
-      debugger;
+       
       btnSaveEditCity.addEventListener("click", function (e) {
         e.preventDefault();
-        debugger;
+         
         // Obtener los nuevos valores editados del formulario
         const newName = nameEditCity.value;
         const newImage = imageEditCity.value;
@@ -231,7 +231,7 @@ export async function showCities(dptoId) {
   const weatherBtn = document.querySelectorAll(".weatherBtnCities");
   weatherBtn.forEach((wBtn) => {
     wBtn.addEventListener("click", function () {
-      debugger;
+       
       const container = this.parentNode.parentNode;
       const nameCity = container.querySelector(".cityInfo p.nom").innerText;
       getWeather(nameCity);
